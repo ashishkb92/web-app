@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import styles from './App.module.css';
 import { useFormContext } from './context/FormContext';
 import FormSection from './components/FormSection';
 import InformationSection from './components/InformationSection';
@@ -20,7 +20,8 @@ function App() {
     setIsSubmitted(true);
   }
   return (
-    <main className='app-container'>
+    <main className={styles['app-container']}>
+      <h2 className='centered'>Enter your details</h2>
       <FormSection onSubmit={handleSubmit} />
       {<InformationSection isSubmitted={isSubmitted} weatherFetch={weatherFetch}/>}
     </main>

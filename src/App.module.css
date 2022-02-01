@@ -1,0 +1,7 @@
+.app-container {
+  width: 30vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 1em;
+  padding: 2em;
+}

@@ -9,15 +9,17 @@ const InformationSection = ({ isSubmitted, weatherFetch }) => {
     if (weatherFetch.loading) return constants.LOADING;
     if (weatherFetch.error) return `${constants.ERROR} ${weatherFetch.error}`;
     if (weatherFetch.value)
-      return `You are ${nameProps.value} (${
-        ageProps.value
-      } years old) and are living at ${
-        locationProps.value
-      }. According your age, you should have slept for a total of ${
-        ageProps.value * 365 * constants.PER_DAY_SLEEP
-      } hour(s). The weather at your location is ${
-        weatherFetch.value?.data
-      } Celsius.`;
+      return (
+        <p className='centered'>
+          You are <strong>{nameProps.value}</strong> (
+          <strong>{ageProps.value}</strong> years old) and are living at{' '}
+          <strong>{locationProps.value}</strong>. According your age, you should
+          have slept for a total of{' '}
+          <strong>{ageProps.value * 365 * constants.PER_DAY_SLEEP}</strong>{' '}
+          hour(s). The weather at your location is{' '}
+          <strong>{weatherFetch.value?.data}</strong> Celsius.
+        </p>
+      );
   };
   return <section>{isSubmitted && getString()}</section>;
 };
