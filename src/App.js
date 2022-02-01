@@ -5,7 +5,7 @@ import InformationSection from './components/InformationSection';
 function App() {
   return (
     <div className='App'>
-      <FormSection />
+      <FormSection onSubmit={() => {}}/>
       <InformationSection />
     </div>
   );
