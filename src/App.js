@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { useFormContext } from './components/context/FormContext';
+import { useFormContext } from './context/FormContext';
 import FormSection from './components/FormSection';
 import InformationSection from './components/InformationSection';
 import { useAsync } from './hooks/useAsync';
@@ -20,10 +20,10 @@ function App() {
     setIsSubmitted(true);
   }
   return (
-    <div className='App'>
+    <main className='app-container'>
       <FormSection onSubmit={handleSubmit} />
       {<InformationSection isSubmitted={isSubmitted} weatherFetch={weatherFetch}/>}
-    </div>
+    </main>
   );
 }
 

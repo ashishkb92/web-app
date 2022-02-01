@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo } from 'react';
-import { useInput } from '../../hooks/useInput';
-import { constants } from '../../constants';
+import { useInput } from './../hooks/useInput';
+import { constants } from './../constants';
 
 const FormContext = createContext();
 export const useFormContext = () => useContext(FormContext);
