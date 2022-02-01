@@ -12,7 +12,7 @@ const FormSection = ({ onSubmit }) => {
         }}
       >
         <input {...nameProps} type='text' placeholder='Name' required />
-        <input {...ageProps} type='number' placeholder='Age' required />
+        <input {...ageProps} type='number' placeholder='Age' min="5" max="200" required />
         <input {...locationProps} type='test' placeholder='Location' required />
         <button type='submit'>Submit</button>
       </form>
